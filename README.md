@@ -44,17 +44,15 @@ A standalone Python microservice built with **FastAPI** to power smart content f
 pip install fastapi uvicorn spacy nltk
 python -m nltk.downloader punkt stopwords
 python -m spacy download en_core_web_sm
+```
+### 2. Start the server
+    uvicorn main:app --reload
+  Service will be live at http://localhost:8000.
 
-Start the server
-  uvicorn main:app --reload
 
-Service will be live at http://localhost:8000.
-
-
-Integration Notes
+### 3.Integration Notes
 
     The main Spring Boot backend connects to this microservice for blog enhancements.
-
     React frontend triggers it via POST requests from the UI.
 
 📁 File Structure
